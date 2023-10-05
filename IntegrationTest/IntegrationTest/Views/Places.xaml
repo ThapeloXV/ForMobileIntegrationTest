@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IntegrationTest.Views.Places">
+    <ContentPage.Content>
+        <StackLayout Margin="15,15,15,0">
+            <Entry x:Name="searchEntry" 
+                   Placeholder="Enter the place you would like to search for:"
+                   TextColor="{StaticResource Primary}"/>
+            <Button x:Name="searchButton"
+                    Text="Search" 
+                    Clicked="searchButton_Clicked"/>
+            <ListView x:Name="placesListView"
+                      HorizontalOptions="FillAndExpand"
+                      ItemSelected="placesListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="20"/>
+                                </Grid.RowDefinitions>
+
+                                <Label Text="{Binding description}"
+                                       FontAttributes="Bold"/>
+                                <Label Grid.Row="0"
+                                       Text="{Binding PlaceResponse.mainText}"
+                                       TextColor="{StaticResource Primary}"/>
+                                <Label Grid.Row="1"
+                                       Text="{Binding PlacesResponse.placeId }"/>
+                                <Label Grid.Row="2" 
+                                       Text="{Binding PlacesResponse.secondaryText}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

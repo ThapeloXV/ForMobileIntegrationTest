@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IntegrationTest.Views.Details">
+    <ContentPage.Content>
+        <StackLayout Margin="15,15,15,0">
+
+            <Label Text="Name:" 
+                   FontSize="15"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   TextColor="Black"
+                   FontAttributes="Bold"/>
+
+            <Label x:Name="placeNameLabel"
+                   FontSize="Body"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   TextColor="{StaticResource Primary}"
+                   FontAttributes="Bold"/>
+
+            <Label Text="Address:" 
+                   FontSize="15"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   TextColor="Black"
+                   FontAttributes="Bold"/>
+            
+            <Label x:Name="placeAddress"
+                   FontSize="Body"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   TextColor="{StaticResource Primary}"
+                   FontAttributes="Bold"/>
+
+            <Label Text="Vicinity:" 
+                   FontSize="15"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   TextColor="Black"
+                   FontAttributes="Bold"/>
+            
+            <Label x:Name="placeVicinity" 
+                   FontSize="Body"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   TextColor="{StaticResource Primary}"
+                   FontAttributes="Bold"/>
+
+            <Label Text="URL:" 
+                   FontSize="15"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                  TextColor="Black"
+                   FontAttributes="Bold"/>
+            
+            <Label x:Name="placeUrl" 
+                   FontSize="Body"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   TextColor="{StaticResource Primary}"
+                   FontAttributes="Bold"
+                   />
+
+            <Label Text="Longitude:" 
+                   FontSize="15"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   TextColor="Black"
+                   FontAttributes="Bold"/>
+            
+            <Label x:Name="placeLongitude" 
+                   FontSize="Body"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   TextColor="{StaticResource Primary}"
+                   FontAttributes="Bold"/>
+
+            <Label Text="Latitude:" 
+                   FontSize="15"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   TextColor="Black"
+                   FontAttributes="Bold"/>
+
+            <Label x:Name="placeLatitude" 
+                   FontSize="Body"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   TextColor="{StaticResource Primary}"
+                   FontAttributes="Bold"/>
+
+            <Label Text="UTC Offset:" 
+                   FontSize="15"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   TextColor="Black"
+                   FontAttributes="Bold"/>
+            
+            <Label x:Name="placeUtcOffst" 
+                   FontSize="Body"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   TextColor="{StaticResource Primary}"
+                   FontAttributes="Bold"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
