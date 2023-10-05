@@ -17,13 +17,12 @@ namespace IntegrationTest.Views
         {
             InitializeComponent();
             this.BindingContext = new LoginViewModel();
-
-            var assembly = typeof(LoginPage);
-            iconImage.Source = ImageSource.FromResource("IntegrationTest.Android.Assets.Images.travel-bag.png", assembly);
         }
 
         protected override void OnAppearing()
         {
+            var assembly = typeof(LoginPage);
+            iconImage.Source = ImageSource.FromResource("IntegrationTest.Android.Assets.Images.travel-bag.png", assembly);
             emailEntry.Text = Constants.CLIENT_ID;
             passwordEntry.Text = Constants.CLIENT_SECRET;
         }

@@ -22,9 +22,8 @@ namespace IntegrationTest.Views
 
             this.placesResponse = placesResponse;
             this.token = token;
-            //placeLabel.Text = placesResponse.placeId;
+            
         }
-
         protected async override void OnAppearing()
         {
             var myDetailsView = new DetailsViewModel(placesResponse,token);

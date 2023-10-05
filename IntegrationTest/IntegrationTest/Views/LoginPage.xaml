@@ -9,8 +9,9 @@
     <ContentPage.Content>
         <StackLayout Margin="15"
                  VerticalOptions="Center">
-            
-            <Image x:Name="iconImage"
+
+            <Image Source="IntegrationTest.Assets.Images.travel-bag.png"
+                x:Name="iconImage"
                Aspect="AspectFit"
                HorizontalOptions="FillAndExpand"
                HeightRequest="150"

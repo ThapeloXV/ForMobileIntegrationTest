@@ -4,32 +4,6 @@ using System.Text;
 
 namespace IntegrationTest.Models
 {
-    //    public class DetailResponse
-    //    {
-    //        public IList<DetailResponse> detailResponse { get; set; }
-    //        public string formattedAddress { get; set; }
-    //        public string url { get; set; }
-    //        public int utcOffset { get; set; }
-    //        public double latitude { get; set; }
-    //        public double longitude { get; set; }
-    //        public string name { get; set; }
-    //        public List<object> photos { get; set; }
-    //        public string placeId { get; set; }
-    //        public List<int> types { get; set; }
-    //    }
-
-    //public class DetailRoot
-    //{
-    //    public DetailResponse DetailResponse { get; set; }
-    //    public IList<DetailResponse> Data { get; set; }
-    //}
-
-    //public class Meta
-    //    {
-    //        public DetailRoot root { get; set; }
-    //        public string message { get; set; }
-    //    }
-
     public class DetailResponse
     {
         public string shortName { get; set; }

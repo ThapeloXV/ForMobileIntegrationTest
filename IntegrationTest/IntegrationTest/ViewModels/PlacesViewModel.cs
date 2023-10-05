@@ -11,18 +11,10 @@ namespace IntegrationTest.ViewModels
     class PlacesViewModel
     {
         string token;
-        private readonly JsonSerializerSettings _jsonSerializerSettings;
         public PlacesViewModel(string token)
         {
             //Constructor
-
             this.token = token;
-
-            _jsonSerializerSettings = new JsonSerializerSettings()
-            {
-                NullValueHandling = NullValueHandling.Ignore,
-                DateFormatString = "dd/MM/yyyy HH:mm:ss"
-            };
 
         }
 
@@ -43,7 +35,7 @@ namespace IntegrationTest.ViewModels
             using (HttpClient client = new HttpClient())
             {
 
-                //
+                
                 var tokenRequestData = new FormUrlEncodedContent(new[]
                 {
                        new KeyValuePair<string, string>("client_id",Constants.CLIENT_ID),
@@ -57,8 +49,10 @@ namespace IntegrationTest.ViewModels
                 //Check if the request is successful
                 if (response.IsSuccessStatusCode)
                 {
-                    //
+                    //Read the token 
                     token = await response.Content.ReadAsStringAsync();
+
+                    //Deserialize the token
                     var tokenObject = JsonConvert.DeserializeObject<TokenResponse>(token);
                     new PlacesViewModel(tokenObject.access_token);
 

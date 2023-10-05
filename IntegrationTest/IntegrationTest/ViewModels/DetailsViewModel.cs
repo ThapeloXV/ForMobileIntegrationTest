@@ -38,10 +38,16 @@ namespace IntegrationTest.ViewModels
 
                 using (HttpClient client = new HttpClient())
                 {
+                    //Authorise the connection to the API
                     client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+
+                    //Get the response
                     var response =await client.GetAsync(url);
+
+                    //Get the API data
                     var json = await response.Content.ReadAsStringAsync();
 
+                    //Deserialize the API data
                     var root = JsonConvert.DeserializeObject<Root2>(json);
 
                     details = root.data;
